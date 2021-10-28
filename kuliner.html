@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+    rel="stylesheet"  
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css"
+    />
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&family=Sarala:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Shadows+Into+Light" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <style>
+
+        .carousel {
+            height: 100vh;
+        }
+
+        .carousel-item{
+            height: 100vh;
+        } 
+
+        .centered {
+          position: absolute;
+          top: 20%;
+          left: 15%;
+          transform: translate(-50%, -50%);
+          font-family: 'Sarala', sans-serif;
+          z-index: 1;
+          margin: 0;
+          color: white;
+          text-shadow: 1px 1px 6px darkgray;
+        }
+
+        .centered p {
+          font-family: "Shadows Into Light"; 
+          font-size: 20px; 
+          font-style: normal; 
+          font-variant: normal; 
+          font-weight: 400; 
+          line-height: 15.4px;
+        
+        }
+
+        .jarak{
+          margin-top: 1em;
+        }
+
+        .batas{
+          margin-right: 0.5em;
+        }
+
+        .galeri img{
+          filter: grayscale(1) brightness(0.5);
+        }
+
+        .galeri img:hover{
+          filter: grayscale(0) brightness(1);
+        }
+
+        .bg-color{
+          background-color: #f3f5f6;
+        }
+
+        #btn-back-to-top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display: none;
+          background-color: rgb(20, 216, 216);
+        }
+        
+        .my-slider-progress {
+          background: #ccc;
+        }
+
+
+        .my-slider-progress-bar {
+          background: greenyellow;
+          height: 2px;
+          transition: width 400ms ease;
+          width: 0;
+        }
+
+        .komen{
+          height: 200px;
+        }
+      </style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="font-family: poppins;">
+      <div class="container">
+        <a class="navbar-brand" href="#">Balinesse</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <ul class="navbar-nav">
+            <li style="margin-right: 20px;" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Wisata
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="Wisata-Nusa-Penida.html">Nusa penida</a></li>
+                <li><a class="dropdown-item" href="Wisata-Ubud.html">Ubud</a></li>
+                <li><a class="dropdown-item" href="Wisata-Kuta.html">Kuta</a></li>
+              </ul>
+            </li>
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Kuliner
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Sate lilit</a></li>
+                <li><a class="dropdown-item" href="#">Nasi jinggo</a></li>
+                <li><a class="dropdown-item" href="#">Ayam betutu</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      <!-- Carousel -->
+      <div id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://tukangreview.com/wp-content/uploads/2019/10/sate-lilit-bali.jpg" class="d-block w-100" alt="Foto 1">
+          </div>
+          <div class="centered"> 
+            <h2>Sate Lilit</h2>
+            <p>Eksplore Kuliner Khas Bali</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri -->
+      <section class="container py-5">
+        <h2 class="text-center"> Galery </h2>
+        <div class="row py-5">
+          <div class="col-4 galeri">
+            <img src="https://whattocooktoday.com/wp-content/uploads/2013/09/IMG_1319.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-4 galeri">
+              <img src="https://www.masakapahariini.com/wp-content/uploads/2018/12/sate-lilit-MAHI-7.jpg" class="img-fluid " alt="">
+              <img src="https://img-global.cpcdn.com/recipes/8b95dc849794c115/1200x630cq70/photo.jpg" class="img-fluid jarak" alt="">
+              <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2019/02/22/5c6f8b330d058-sate-lilit-tempe_1265_711.jpg" class="img-fluid jarak" alt="">
+          </div>
+          <div class="col-4 galeri">
+            <img src="https://i.pinimg.com/550x/aa/7b/36/aa7b3606abddbc08b53e8f29773739d4.jpg" class="img-fluid" alt="">
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Informasi -->
+      <section class="container-fluid bg-color">
+        <div class="container py-5">
+          <h2> Informasi Mengenai Sate Lilit</h2>
+          <div class="row py-5">
+            <div class="col-3">
+              <img src="https://whattocooktoday.com/wp-content/uploads/2013/09/IMG_1319.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-3">
+              <img src="https://images.unsplash.com/photo-1603088549155-6ae9395b928f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" class="img-fluid " alt="">
+                <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2019/02/22/5c6f8b330d058-sate-lilit-tempe_1265_711.jpg" class="img-fluid jarak" alt="">
+            </div>
+            <div class="col-6 px-5">
+              <div class="card-body">
+                <h4 class="card-title" style="margin-left: -35px; font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-bottom: 0.5em;">Sate Lilit</h4>
+                <h5 style="margin-left: -35px; font-size: 16px;">Kuliner khas Bali</h5>
+                <p class="card-text" style="font-size: 14px; padding-bottom: 5px; margin-left: -35px;">Makanan khas Bali memang selalu menggoda selera. Salah satu yang paling populer mungkin bebek betutu. Tetapi sebenarnya pulau dewata masih punya sederet kuliner otentik yang tak kalah nikmat di lidah. Plecing kangkung misalnya. Sate lilit misalnya. <br> <br>Bicara soal sate lilit, makanan khas Bali yang satu ini pasti digemari pecinta ikan. Pasalnya sate memang dibuat dari fillet ikan yang digiling dan dicetak sebelum dibakar. Karena itulah rasanya pun istimewa. Apalagi dengan paduan bumbu khas Bali yang sarat aroma. Dijamin semakin nikmat saat disantap bersama nasi putih. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pembuatan -->
+      <section class="container py-5">
+        <h1 class="text-center"> CARA PEMBUATAN SATE LILIT</h1>
+        <div class="row d-flex justify-content-center py-3">
+          <div class="col-8">
+            <h4 class="py-3">Bahan - bahan</h4>
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">1 Kg ikan tuna</li>
+                <li class="list-group-item">1 buah Kelapa parut</li>
+                <li class="list-group-item">4 Sendok makan Gula Merah</li>
+                <li class="list-group-item">12 siung Bawang merah</li>
+                <li class="list-group-item">5 siung bawang putih</li>
+                <li class="list-group-item">4 ruas jari jahe</li>
+                <li class="list-group-item">4 ruas jari Laos</li>
+                <li class="list-group-item">1 ruas jari Kunyit</li>
+                <li class="list-group-item">1 sendok makan Merica butir</li>
+                <li class="list-group-item">1 sendok makan Ketumbar</li>
+                <li class="list-group-item">4 batang sereh</li>
+                <li class="list-group-item">Cabe rawit secukupnya</li>
+                <li class="list-group-item">5 Lembar daun jeruk</li>
+                <li class="list-group-item">Garam dan Kaldu ayam secukupnya</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-8">
+            <h4 class="py-3">Langkah Pembuatan</h4>
+            <div class="row">
+              <div class="col-12 ">
+                <div class="card w-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Pertama</h5>
+                    <p class="card-text">Haluskan bawang merah, bawang putih, jahe, laos, kunyit, merica, ketumbar, cabai rawit merah</p>
+                  
+                  
+                    <h5 class="card-title">Kedua</h5>
+                    <p class="card-text">Campurkan daging ikan dengan bumbu yg sudah dihaluskan, tambahkan kelapa parut dan gula merah yang sudah digerus. Masukan irisan daun jeruk, kaldu bubuk dan sedikit minyak kelapa, aduk semua dengan daging ikan hingga rata</p>
+                  
+                    <h5 class="card-title">Ketiga</h5>
+                    <p class="card-text">Lilitkan adonan ikan bumbu ke tangkai bambu atau batang serai jika mau lebih harum dengan cara dililitkan dr atas kebawah</p>
+                  
+                  
+                    <h5 class="card-title">Keempat</h5>
+                    <p class="card-text">Panaskan arang kelapa, bakar sate lilit hingga berubah warna jadi kecoklatan dan harum tercium. Sajikan dengan sambal matah lebih mantaaabbb</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Review -->
+
+      <section class="container-fluid bg-color">
+        <div class="container py-5">
+          <h1 class="text-center">Apa Kata Mereka?</h1>
+          <div class="row jarak">
+            <div class="splide">
+              <div class="splide__track">
+                <ul id="comment-list" class="splide__list">
+                  <li class="splide__slide">
+                    <div class="col batas">
+                      <div class="card">
+                        <div class="card-body komen">
+                          <h5 class="card-title text-capitalize">joko susilo</h5>
+                          <p class="card-text">Terimakasih web ini sangat membantu</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="col batas">
+                      <div class="card">
+                        <div class="card-body komen">
+                          <h5 class="card-title text-capitalize">anwar aja</h5>
+                          <p class="card-text">aku suka banget sama sate lilit.</p>
+                        </div>
+                      </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="col batas">
+                      <div class="card">
+                        <div class="card-body komen">
+                          <h5 class="card-title text-capitalize">mamat anak sebelah</h5>
+                          <p class="card-text">sate lilit mah jangan ditanya rasanya</p>
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-8">
+            <button id="btn-comment" class="btn btn-primary w-100 text-capitalize">
+              write a comment
+              </button>
+                <div id="comment-form-section" class="col-12 d-none">
+                  <form id="comment-form">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"
+                        >Username</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-username"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="comment" class="form-label">Comments</label>
+                      <textarea
+                        name="comment"
+                        id="input-comment"
+                        rows="5"
+                        class="form-control"
+                      ></textarea>
+                    </div>
+                    <div>
+                      <button id="btn-submit" type="submit" class="btn btn-primary">
+                        submit
+                      </button>
+                      <button
+                        id="btn-cancel"
+                        type="button"
+                        class="btn btn-link text-decoration-none"
+                      >
+                        cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+          </div>
+        </div>
+      </section>
+
+      <button type="button" class="btn btn-info btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+
+
+
+      <!-- Javascript -->
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"> </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script>
+        
+        //Get the button -------------------------------------
+        let mybutton = document.getElementById("btn-back-to-top");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        // Add Comment
+        const elBtnComment = document.querySelector('#btn-comment');
+        const elCommentList = document.querySelector('#comment-list');
+        
+        const elCommentSection = document.querySelector('#comment-form-section');
+        const elCommentForm = document.querySelector('#comment-form');
+        const elInputUsername = document.querySelector('#input-username');
+        const elInputComment = document.querySelector('#input-comment');
+        const elBtnSubmit = document.querySelector('#btn-submit');
+        const elBtnCancel = document.querySelector('#btn-cancel');
+        
+        const i = document.createElement("li")
+        i.setAttribute("class", "splide__slide")
+        const j = document.createElement("div")
+        j.setAttribute("class", "col batas")
+        const k = document.createElement("div")
+        k.setAttribute("class", "card")
+        const l = document.createElement("div")
+        l.setAttribute("class", "card-body komen")
+        const m = document.createElement("h5")
+        m.setAttribute("class", "card-title text-capitalize")
+        const n = document.createElement("p")
+        n.setAttribute("class", "card-text")
+        
+        elBtnSubmit.addEventListener("click", function(enter){
+            enter.preventDefault()
+            m.innerText = elInputUsername.value 
+            n.innerText = elInputComment.value
+            l.append(m)
+            l.append(n)
+            k.append(l)
+            j.append(k)
+            i.append(j)
+            
+            
+            elCommentList.prepend(i)
+            elInputComment.value = ""
+            elInputUsername.value = ""
+          })
+          
+          elBtnComment.addEventListener("click", function(){
+            elCommentSection.classList.remove("d-none")
+            elBtnComment.classList.add("d-none")
+          })
+          elBtnCancel.addEventListener("click", function(){
+            elInputComment.value = ""
+            elInputUsername.value = ""
+            elCommentSection.setAttribute("class", "d-none")
+            elBtnComment.setAttribute("class", "btn btn-primary w-100 text-capitalize")
+          })
+              
+          // Comment Slide
+          var splide = new Splide( '.splide', {
+            type: 'loop',
+            perPage: 5,
+            focus  : 'center',
+            breakpoints: {
+              900: {
+                perPage: 2,
+              },
+              
+              600: {
+                perPage: 1,
+              },
+            
+            }
+                    } );
+  
+          splide.mount();
+          
+      </script>
+</body>
+</html>

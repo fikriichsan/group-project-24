@@ -55,6 +55,10 @@
           margin-right: 0.5em;
         }
 
+        .galeri{
+          margin-top: 0px;
+        }
+
         .galeri img{
           filter: grayscale(1) brightness(0.5);
         }
@@ -74,21 +78,28 @@
           display: none;
           background-color: rgb(20, 216, 216);
         }
-        
-        .my-slider-progress {
-          background: #ccc;
-        }
 
-
-        .my-slider-progress-bar {
-          background: greenyellow;
-          height: 2px;
-          transition: width 400ms ease;
-          width: 0;
+        .splide__pagination__page{
+          visibility: hidden;
         }
 
         .komen{
           height: 200px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .carousel {
+            display: none;
+          }
+
+          .hilang{
+            display: none;
+          }
+
+          .galeri{
+          margin-top: 1em;
+        }
+
         }
       </style>
 
@@ -121,9 +132,9 @@
                 Kuliner
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Sate lilit</a></li>
-                <li><a class="dropdown-item" href="#">Nasi jinggo</a></li>
-                <li><a class="dropdown-item" href="#">Ayam betutu</a></li>
+                <li><a class="dropdown-item" href="kuliner.html">Sate lilit</a></li>
+                <li><a class="dropdown-item" href="kuliner.html">Nasi jinggo</a></li>
+                <li><a class="dropdown-item" href="kuliner.html">Ayam betutu</a></li>
               </ul>
             </li>
           </ul>
@@ -144,19 +155,26 @@
         </div>
       </div>
 
+      <div class=" container-fluid bg-color d-block d-lg-none"> 
+        <div class="container">
+          <h2>Sate Lilit</h2>
+          <p>Eksplore Kuliner Khas Bali</p>
+        </div>
+      </div>
+
       <!-- Galeri -->
       <section class="container py-5">
         <h2 class="text-center"> Galery </h2>
         <div class="row py-5">
-          <div class="col-4 galeri">
+          <div class="col-md-4 col-sm-12 galeri">
             <img src="https://whattocooktoday.com/wp-content/uploads/2013/09/IMG_1319.jpg" class="img-fluid" alt="">
           </div>
-          <div class="col-4 galeri">
+          <div class="col-md-4 col-sm-12 galeri">
               <img src="https://www.masakapahariini.com/wp-content/uploads/2018/12/sate-lilit-MAHI-7.jpg" class="img-fluid " alt="">
               <img src="https://img-global.cpcdn.com/recipes/8b95dc849794c115/1200x630cq70/photo.jpg" class="img-fluid jarak" alt="">
               <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2019/02/22/5c6f8b330d058-sate-lilit-tempe_1265_711.jpg" class="img-fluid jarak" alt="">
           </div>
-          <div class="col-4 galeri">
+          <div class="col-md-4 col-sm-12 galeri">
             <img src="https://i.pinimg.com/550x/aa/7b/36/aa7b3606abddbc08b53e8f29773739d4.jpg" class="img-fluid" alt="">
           </div>
           
@@ -168,14 +186,14 @@
         <div class="container py-5">
           <h2> Informasi Mengenai Sate Lilit</h2>
           <div class="row py-5">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 hilang">
               <img src="https://whattocooktoday.com/wp-content/uploads/2013/09/IMG_1319.jpg" class="img-fluid" alt="">
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 hilang">
               <img src="https://images.unsplash.com/photo-1603088549155-6ae9395b928f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" class="img-fluid " alt="">
                 <img src="https://thumb.viva.co.id/media/frontend/thumbs3/2019/02/22/5c6f8b330d058-sate-lilit-tempe_1265_711.jpg" class="img-fluid jarak" alt="">
             </div>
-            <div class="col-6 px-5">
+            <div class="col-lg-6 col-sm-12 px-5">
               <div class="card-body">
                 <h4 class="card-title" style="margin-left: -35px; font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-bottom: 0.5em;">Sate Lilit</h4>
                 <h5 style="margin-left: -35px; font-size: 16px;">Kuliner khas Bali</h5>
@@ -190,7 +208,7 @@
       <section class="container py-5">
         <h1 class="text-center"> CARA PEMBUATAN SATE LILIT</h1>
         <div class="row d-flex justify-content-center py-3">
-          <div class="col-8">
+          <div class="col-md-8 col-sm-12">
             <h4 class="py-3">Bahan - bahan</h4>
             <div class="card">
               <ul class="list-group list-group-flush">
@@ -211,7 +229,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-8">
+          <div class="col-md-8 col-sm-12">
             <h4 class="py-3">Langkah Pembuatan</h4>
             <div class="row">
               <div class="col-12 ">
@@ -375,31 +393,50 @@
         const elBtnSubmit = document.querySelector('#btn-submit');
         const elBtnCancel = document.querySelector('#btn-cancel');
         
-        const i = document.createElement("li")
-        i.setAttribute("class", "splide__slide")
-        const j = document.createElement("div")
-        j.setAttribute("class", "col batas")
-        const k = document.createElement("div")
-        k.setAttribute("class", "card")
-        const l = document.createElement("div")
-        l.setAttribute("class", "card-body komen")
-        const m = document.createElement("h5")
-        m.setAttribute("class", "card-title text-capitalize")
-        const n = document.createElement("p")
-        n.setAttribute("class", "card-text")
         
+        
+        // Comment Slide
+        var splide = new Splide( '.splide', {
+          perPage: 3,
+          focus  : 'center',
+          breakpoints: {
+            900: {
+              perPage: 2,
+            },
+            
+            600: {
+              perPage: 1,
+            },
+            
+          }
+        } );
+        
+        splide.mount();
+
         elBtnSubmit.addEventListener("click", function(enter){
-            enter.preventDefault()
+          enter.preventDefault()
+            const slide = document.createElement( 'li' );
+            slide.classList.add( 'splide__slide' );
+            const j = document.createElement("div")
+            j.setAttribute("class", "col batas")
+            const k = document.createElement("div")
+            k.setAttribute("class", "card")
+            const l = document.createElement("div")
+            l.setAttribute("class", "card-body komen")
+            const m = document.createElement("h5")
+            m.setAttribute("class", "card-title text-capitalize")
+            const n = document.createElement("p")
+            n.setAttribute("class", "card-text")
             m.innerText = elInputUsername.value 
             n.innerText = elInputComment.value
             l.append(m)
             l.append(n)
             k.append(l)
             j.append(k)
-            i.append(j)
+            slide.append(j)
             
-            
-            elCommentList.prepend(i)
+            elCommentList.prepend(slide)
+            splide.mount();
             elInputComment.value = ""
             elInputUsername.value = ""
           })
@@ -414,26 +451,8 @@
             elCommentSection.setAttribute("class", "d-none")
             elBtnComment.setAttribute("class", "btn btn-primary w-100 text-capitalize")
           })
-              
-          // Comment Slide
-          var splide = new Splide( '.splide', {
-            type: 'loop',
-            perPage: 5,
-            focus  : 'center',
-            breakpoints: {
-              900: {
-                perPage: 2,
-              },
-              
-              600: {
-                perPage: 1,
-              },
-            
-            }
-                    } );
-  
-          splide.mount();
-          
-      </script>
+
+        
+        </script>
 </body>
 </html>

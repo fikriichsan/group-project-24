@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Shadows+Into+Light" />
+    
+    <!-- Foto , font CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&family=Sarala:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Splidejs -->
+    <link
+    rel="stylesheet"  
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css"
+    />
+
+    <title>Baliness</title>
+</head>
+
+
+<style>
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.foto-karusel img {
+    object-fit: cover;
+    height: 600px;
+    width: 100%;
+}
+
+.cari {
+    /* position: absolute;
+    z-index: 10; */
+    /* display: table-cell; */
+     vertical-align: middle; 
+     margin-top: 300px;
+     
+   
+}
+
+.kotak-cari {
+  width: 130px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  background-color: #00629b ;
+  color: white;
+  }
+
+.kotak-cari:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: rgb(0, 0, 0);
+  transform: translateY(-7px);
+  
+}
+
+.carousel-caption {
+  font-family: 'Sarala', sans-serif;
+    /* position:absolute ;
+    z-index: 1;
+    display:table;
+    text-align: center; 
+    vertical-align: middle;*/
+
+  z-index: 1;
+  position: absolute;
+  margin: 0;
+  color: white;
+  left: 20%;
+  top: 30%;
+  text-shadow: 1px 1px 6px darkgray;
+  /* transform: translate(-50%, -50%); */
+}
+
+.carousel-caption p {
+    font-family: "Shadows Into Light"; 
+    font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 15.4px;
+  
+  }
+
+
+/* ------ foto baliiiiiiiiiiii css------------------------------ */
+.gallery {
+	 display: flex;
+	 padding: 2px;
+	 transition: 0.3s;
+}
+ .gallery:hover .gallery__image {
+	 filter: grayscale(1);
+}
+ .gallery__column {
+	 display: flex;
+	 flex-direction: column;
+	 width: 50%;
+}
+ .gallery__link {
+	 margin: 2px;
+	 overflow: hidden;
+}
+ .gallery__link:hover .gallery__image {
+	 filter: grayscale(0);
+}
+ .gallery__link:hover .gallery__caption {
+	 opacity: 1;
+}
+ .gallery__thumb {
+	 position: relative;
+}
+ .gallery__image {
+	 display: block;
+	 width: 100%;
+	 transition: 0.3s;
+   text-align: center;
+}
+ .gallery__image:hover {
+	 transform: scale(1.1);
+}
+ .gallery__caption {
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 padding: 25px 15px 15px;
+	 width: 100%;
+	 font-family: 'Montserrat', sans-serif;
+	 font-size: 14px;
+   font-weight: 300;
+	 color: white;
+	 opacity: 0;
+	 background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+	 transition: 0.3s;
+}
+
+/* section Bali------------------------------------ */
+.ket-bali {
+  padding: 100px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* slide destinasi------------------------------------------- */
+.img-destination img {
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px rgb(123, 123, 123) ;
+}
+.img-destination:hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.5;
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.10, 1.10);
+}
+
+
+.container-destination {
+  padding: 100px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+  background-color: #f3f5f6;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 6%;
+  left: 20px;
+  color: #f3f5f6; 
+  font-weight: 500;
+  text-shadow: 2px 2px 4px darkgray;
+}
+
+
+/* Gallery----------------------------- */
+.galeri {
+  padding: 120px 40px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+ 
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  padding: 4px 2px;
+}
+
+/* button --------------------------------------------- */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: rgb(20, 216, 216);
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns --------------------- medium----------------------- */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .ket-bali {
+  font-size: 16px;
+  }
+  .gallery {
+	 display: flex;
+	 flex-direction: column;
+  }
+  .gallery__column {
+	 width: 100%;
+  }
+
+  /* slide destinasi------------------------------ */
+  .img-destination img {
+  width: 200px;
+  height: 260px;
+  box-shadow: 1px 3px 10px rgb(123, 123, 123) ;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .gallery {
+	 display: flex;
+	 flex-direction: column;
+  }
+  .gallery__column {
+	 width: 100%;
+  }
+  .ket-bali {
+  font-size: 16px;
+  }
+  
+  /* slide destinasi-------------------------------------------- */
+  .img-destination img {
+  width: 180px;
+  height: 260px;
+  box-shadow: 1px 3px 10px rgb(123, 123, 123) ;
+  }
+}
+
+
+</style>
+
+<body>
+
+  <!-- Navigation -->
+
+<nav class="navbar navbar-expand-lg navbar-light" style="font-family: poppins;">
+  <div class="container">
+    <a class="navbar-brand" href="#">Balinesse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <ul class="navbar-nav">
+        <li style="margin-right: 20px;" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Wisata
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="Wisata-Nusa-Penida.html">Nusa penida</a></li>
+            <li><a class="dropdown-item" href="Wisata-Ubud.html">Ubud</a></li>
+            <li><a class="dropdown-item" href="Wisata-Kuta.html">Kuta</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Kuliner
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Sate lilit</a></li>
+            <li><a class="dropdown-item" href="#">Nasi jinggo</a></li>
+            <li><a class="dropdown-item" href="#">Ayam betutu</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="carouselExampleControls" class="carousel slide foto-karusel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-caption">
+            
+                <h2>Eksplor Bali dengan Harga Eksklusif</h2>
+                <p>Temukan tempat wisata menarik di Bali</p>
+             
+          </div>
+
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1925&q=80" class="d-block w-100" alt="bali">
+              <div class="carousel-caption">
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1554481923-a6918bd997bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1965&q=80" class="d-block w-100" alt="bali">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1557093793-e196ae071479?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80" class="d-block w-100" alt="bali">
+          </div>
+
+        
+           <!-- Search box
+            ================================================== -->
+            <div class="col-8 mx-auto">   
+            <div class="input-group cari">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                aria-describedby="search-addon" />
+                <button type="button" class="btn kotak-cari">cari</button>
+            </div>
+            </div>
+
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  
+    </div>
+
+    <div class="container-fluid ket-bali">
+    <div class="row row-cols-2">
+    <div class="col-6 px-4 py-5 col-md-4">
+      Pulau Bali adalah pulau kecil yang indah dan merupakan bagian dari Kepulauan Indonesia. Pulau ini juga merupakan pariwisata Indonesia yang paling terkenal di dunia. Pulau Bali memiliki banyak tempat menarik seperti sawah, panorama indah, gunung berapi, kegiatan pariwisata maupun objek wisata. Selain itu, terdapat juga hutan yang indah, pantai berpasir panjang, air biru hangat, kegiatan berselancar dan orang-orang yang ramah.
+      Bali lebih dikenal juga karena perpaduan alam dengan manusia serta adat kebudayaannya yang unik, yang berlandaskan pada konsep keserasian dan keselarasan yang telah mewujudkan suatu kondisi estetika yang ideal dan bermutu tinggi.
+      
+    </div>
+    <!----------------------- Photo Baliiiiiiii -------------------->
+      <div class="col-6 px-0 col-md-8 px-md-4 py-md-2 foto-bali">
+        <div class="gallery">
+          <div class="gallery__column">
+            <a href="https://unsplash.com/@align_all" target="_blank" class="gallery__link">
+              <figure class="gallery__thumb">
+                <img src="https://images.unsplash.com/photo-1587542513982-535059868fad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1935&q=80" class="gallery__image">
+                <figcaption class="gallery__caption">Portrait by Ranjith Alingal
+                </figcaption>
+              </figure>
+            </a>
+
+            <a href="https://unsplash.com/@katerinamarkush" target="_blank" class="gallery__link">
+              <figure class="gallery__thumb">
+                <img style="object-fit: cover;" height="200px" src="https://images.unsplash.com/photo-1564972748-344f9538f651?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80" alt="Portrait by Amir Geshani" class="gallery__image">
+                <figcaption class="gallery__caption">Portrait by Katerina Markush
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+
+          <div class="gallery__column">
+            <a href="https://unsplash.com/@alex_photogram" target="_blank" class="gallery__link">
+              <figure class="gallery__thumb">
+                <img src="https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80" alt="Portrait by Dima DallAcqua" class="gallery__image">
+                <figcaption class="gallery__caption">Portrait by Alexandra Dementyeva</figcaption>
+              </figure>
+            </a>
+          </div>
+      </div>
+
+    </div>
+</div>
+</div>
+
+
+<!--------------------- Slide destinasi --------------------->
+
+<div class="splide container-destination">
+  <h3 style="font-family:'Montserrat', sans-serif; font-weight: 600; padding-bottom:10px;">Destinasi Populer</h3>
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+
+        <div class="splide__slide__container">
+          
+          <div class="slide__content img-destination">
+            <a href="Wisata-Nusa-Penida.html">
+              <img src="https://images.unsplash.com/photo-1595319101337-601371f02e1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80" alt="nusa-penida" />
+              <p class="bottom-left">Nusa Penida</p>
+            </a>
+          </div>
+        </div>
+      </li>
+      
+      <li class="splide__slide">
+        <div class="splide__slide__container">
+          <div class="slide__content img-destination">
+            <a href="Wisata-Ubud.html">
+              <img src="https://images.unsplash.com/photo-1444194563460-454833ba6005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1936&q=80" alt="ubud" />
+              <p class="bottom-left">Ubud</p>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="splide__slide__container">
+          <div class="slide__content img-destination">
+            <a href="Wisata-Kuta.html">
+              <img src="https://images.unsplash.com/photo-1538172522459-61e5aede6d06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1975&q=80" alt="Kuta" />
+              <p class="bottom-left">Kuta</p>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="splide__slide__container">
+            <div class="slide__content img-destination">
+              <a href="Wisata-Nusa-Penida.html">
+                <img src="https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80" alt="Pura" />
+                <p class="bottom-left">Pura Uluwatu</p>
+              </a>
+            </div>
+        </div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="splide__slide__container">
+          <div class="slide__content img-destination">
+            <a href="Wisata-Nusa-Penida.html">
+              <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_klook_water/activities/dw5mamvpyhc4jp0xohoc/Vue%20Beach%20Club%20Day%20Pass%20di%20Canggu.jpg" alt="Pura" />
+              <p class="bottom-left">Vue Beach Club, Canggu</p>
+            </a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+<!-- ----------------  Gallery ----------------------------------->
+<div class="row">
+  <div class="galeri">
+    <h3 style="font-family:'Montserrat', sans-serif; font-weight: 600; padding-bottom: 10px;">
+      Galeri 
+    </h3></div>
+
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1531778272849-d1dd22444c06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1060&q=80" alt="bali">
+    <img src="https://images.unsplash.com/photo-1552301726-570d51466ae2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=80" alt="bali">
+    <img src="https://images.unsplash.com/photo-1542897643-8158da5b4607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80">
+    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80">
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1938&q=80">
+    <img src="https://images.unsplash.com/photo-1629367285546-b5aa0cc8cde9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80">
+    <img src="https://images.unsplash.com/photo-1593938637267-7d70420742a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1596637020779-ade1e5bb4c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80">
+    <img src="https://images.unsplash.com/photo-1539014861783-7ac37e9d290c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80">
+    <img src="https://images.unsplash.com/photo-1559305289-4c31700ba9cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1973&q=80">
+    <img src="https://images.unsplash.com/photo-1546484475-7f7bd55792da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+    <img src="https://images.unsplash.com/photo-1529246662272-fabcd5612073?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80">
+    <img src="https://images.unsplash.com/photo-1599679838000-050dea36d016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80" style="height: 500px; object-fit: cover;">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1938&q=80">
+    <img src="https://images.unsplash.com/photo-1536146021566-627ce3c4d813?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80">
+    <img src="https://images.unsplash.com/photo-1532184420883-6fa7939fd7c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+    <img src="https://images.unsplash.com/photo-1553902000-e036b7d05af5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+    <img src="https://images.unsplash.com/photo-1542897730-a00e7d3c4b4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80">
+    <img src="https://images.unsplash.com/photo-1528265417219-1a288ae08573?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80">
+    <img src="https://images.unsplash.com/photo-1500213721845-709b85a28da0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80">
+  </div>
+  <div class="column">
+    <img src="https://images.unsplash.com/photo-1542897731-42aca67344f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80">
+    <img src="https://images.unsplash.com/photo-1496531693211-31c5234a5ea9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80">
+    <img src="https://images.unsplash.com/photo-1520329612326-d6038d1395a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1964&q=80">
+    <img src="https://images.unsplash.com/photo-1571984405176-5958bd9ac31d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1932&q=80">
+    <img src="https://images.unsplash.com/photo-1523952578875-e6bb18b26645?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80">
+    <img src="https://images.unsplash.com/photo-1523882814288-81f74407eb39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80">
+  </div>
+</div>
+
+<!-- button ------------------------------------------- -->
+<button type="button" class="btn btn-info btn-floating btn-lg" id="btn-back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"> </script>
+
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+      
+
+  <script>
+      var splide = new Splide( '.splide', {
+        perPage: 4,
+        rewind : true,
+        breakpoints: {
+          800: {
+            perPage: 3,
+            rewind : true,
+          },
+          600: {
+            perPage: 2,
+            rewind : true,
+          },
+        
+        }
+        
+        
+        
+      }
+      );
+
+      splide.mount();
+
+
+    //Get the button -------------------------------------
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+          
+  </script>      
+      
+</body>
+</html>

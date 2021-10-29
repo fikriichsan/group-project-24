@@ -316,6 +316,7 @@
                         type="text"
                         class="form-control"
                         id="input-username"
+                        required
                         aria-describedby="emailHelp"
                       />
                     </div>
@@ -325,6 +326,7 @@
                         name="comment"
                         id="input-comment"
                         rows="5"
+                        required
                         class="form-control"
                       ></textarea>
                     </div>
@@ -427,18 +429,22 @@
             m.setAttribute("class", "card-title text-capitalize")
             const n = document.createElement("p")
             n.setAttribute("class", "card-text")
-            m.innerText = elInputUsername.value 
-            n.innerText = elInputComment.value
-            l.append(m)
-            l.append(n)
-            k.append(l)
-            j.append(k)
-            slide.append(j)
-            
-            elCommentList.prepend(slide)
-            splide.mount();
-            elInputComment.value = ""
-            elInputUsername.value = ""
+            if(elInputComment.value === "" || elInputUsername.value === ""){
+              alert("Username dan Komen tidak boleh kosong")
+            } else {
+                m.innerText = elInputUsername.value 
+                n.innerText = elInputComment.value
+                l.append(m)
+                l.append(n)
+                k.append(l)
+                j.append(k)
+                slide.append(j)
+                
+                elCommentList.prepend(slide)
+                splide.mount();
+                elInputComment.value = ""
+                elInputUsername.value = ""
+            }
           })
           
           elBtnComment.addEventListener("click", function(){
